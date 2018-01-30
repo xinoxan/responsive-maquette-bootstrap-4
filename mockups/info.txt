@@ -1,0 +1,13 @@
+
+
+Comme je vous disais, je vous propose donc de réaliser l’intégration du projet en pièce jointe :
+- Une landing page pour un projet de ebook
+- Vous disposez du PSD et d’un JPG de la version Desktop
+
+J’attends de vous que vous intégriez cette maquette en utilisant les outils que vous jugerez utiles pour un front-end (Precompiler CSS, Task Runners, Dependency Manager….)
+De plus j’aimerai que le projet soit responsive (mobile, tablette, desktop) et j’en appelle donc sur ce point à votre créativité puisque la maquette mobile n’est pas présente en pièce jointe. Vous êtes libre de choisir entre un site full responsive ou 2 versions différentes. Vous êtes libre également de choisir votre framework CSS même si nous sommes plus habitués à utiliser Bootstrap en interne.
+
+Vous pouvez adapter la maquette si vous estimez que des éléments doivent être différents de ceux présents dans le PSD.
+Enfin la notion de SEO doit faire partie de votre travail, l’optimisation de la page est donc essentielle tant d’un point de vue technique que sémantique.
+
+Vous pouvez m’envoyer votre projet par le moyen de votre choix (zip, repo Git…), dans l’idéal avant mardi soir.

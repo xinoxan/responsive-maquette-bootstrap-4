@@ -1,0 +1,342 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+// Google Font Variables
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Muli);
+
+// Font Variables
+$body-font: 'Muli', sans-serif;
+$header-font: 'Muli', sans-serif;
+$roboto-slab: 'Roboto Slab', serif;   
+$open-sans: 'Open Sans', sans-serif;
+
+// custom colour variables
+$theme-colors: (
+  "primary": #2969a9,
+  "danger": #fe5368,
+  "info":#654F6F,
+  "warning":#ED6A5A,
+  "muted":#373F47,
+
+);
+
+// Other colour variables
+
+$brand-blue: #354996;
+$card-title-color: #f78f1e;
+$card-success-color:#00a64f;
+$light-gray: #f8f8f8;
+$main-font-color: #373F47;
+$main-font-weight: 300;
+
+
+// Padding variables
+$spacing:4rem;
+
+
+// Mixin Opacity
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Components
+
+body {
+  background-color: $light-gray;
+  font-family: $open-sans;
+  font-weight: $main-font-weight;
+}
+
+
+.navbar{
+padding: 1rem 1rem !important;
+}
+
+
+.navbar-inverse .navbar-nav .nav-link{
+cursor:pointer;
+}
+
+ul{
+list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font !important;
+  font-weight: normal;
+}
+
+.btn {
+  font-family: $roboto-slab;
+  font-weight: bold;
+}
+
+
+hr{
+width:20%;
+}
+
+button:focus{
+cursor:pointer;    
+}
+
+.bg--euranka{
+background-color:$brand-blue;
+}
+
+.bg-gray{
+background-color:$light-gray;
+padding-bottom:$spacing;
+}
+
+.padding-euranka{
+ margin-top:3rem;	
+}
+
+.text-euranka{
+color:$brand-blue;
+}
+
+footer{
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+background-color:$brand-blue;	
+}
+
+
+
+// Table price
+.card {
+  border-radius: 0px !important;
+ -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2) !important; 
+box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2) !important;
+  transition: all .3s ease-in-out;
+  padding: 2.25rem 0 !important;
+  position: relative !important;
+  will-change:transform; 
+  
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: $card-success-color;
+    transition: 0.5s;
+  }
+  
+  &:hover {
+    transform: scale(1.05);
+    -webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, .08);
+    box-shadow: 0 20px 35px 0 rgba(0, 0, 0, .08);
+    
+    &:after {
+      width: 100%;
+    }
+    
+  }
+  & .card-header {
+    background-color: white;
+    padding-left: 2rem;
+    border-bottom: 0px;
+  }
+  & .card-title {
+    margin-bottom: 1rem !important;
+    text-align:center;
+    color:$card-title-color !important;
+    font-size:1.2em !important;
+  }
+   & .card-subtitle {
+    margin-bottom: 1rem !important;
+    text-align:center;
+    color:$main-font-color;
+  }
+
+
+  & .card-block {
+    padding-top: 0;
+  	text-align:center;
+  }
+
+  & .list-group-item {
+    border: 0px;
+    padding: .25rem;
+    color: $main-font-color;
+    font-weight: $main-font-weight;
+  }
+}
+
+// Price
+.display-2 {
+  font-size: 4rem !important;
+  letter-spacing: -.2rem !important;
+  & .period {
+    font-size: 3rem !important;
+    color: lighten($main-font-color, 20%);
+    letter-spacing: -.2rem;
+    padding-left:1rem;
+  }
+}
+
+// Button card price style
+.btn {
+  text-transform: uppercase;
+  font-size: .75rem !important;
+  font-weight: $main-font-weight + 200 !important;
+  border-radius: 0;
+  padding: .75rem 1.25rem !important;
+  letter-spacing: 1px !important;
+}
+
+.btn-euranka{
+	border-radius:20px !important;
+}
+
+.btn-gradient { 
+  background-color: #f2f2f2;
+  transition: background .3s ease-in-out;
+  
+&:active{
+color: white !important;
+	}
+  &:hover {
+    color: white !important;
+  }
+}
+
+
+
+// Card profile 
+
+.card-profile {
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 0;
+  border: 0;
+  box-shadow: 1em 1em 2em rgba(0,0,0,.2);
+  
+  .card-img-top {
+    border-radius: 0;
+  }
+
+  .card-img-profile {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-top: -95px;
+    margin-bottom: 35px;
+    border: 5px solid white;
+  }
+
+  .card-title {
+    margin-bottom: 50px;
+
+    small {
+      display: block;
+      font-size: 1em;
+      margin-top: .2em;
+    }
+  }
+  
+  
+}
+
+// Card profile ends
+
+
+// Media queries Breakpoints
+
+ h1, h2, h3, h4, h5, h6, p{
+ 	font-size:1rem !important;
+ }
+
+@include media-breakpoint-up(sm) {
+     h1   {
+    font-size: 1rem !important;
+  }
+
+  h2, h4{
+  font-size: 0.8rem !important;
+  }
+}
+
+@include media-breakpoint-up(md) {
+    h1  {
+    font-size: 1.5rem !important;
+  }
+
+	h2, h4{
+  font-size: 1rem !important;
+	}
+
+}
+
+@include media-breakpoint-up(lg) {
+    h1  {
+    font-size: 2rem !important;
+  }
+
+  h2, h4{
+  	 font-size: 1.5rem !important;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+    h1   {
+    font-size: 2.5rem !important;
+  }
+  h2, h4 {
+  font-size: 1.2rem !important;
+  }
+
+.card-euranka{
+margin-top:2rem;
+}
+}
+
+@include media-breakpoint-between(md, lg) {
+  .book{
+margin-top:4rem;
+  }
+}
+
+
+// List icons 
+
+.list-group-item:before{
+position:absolute;
+content:"\2713\0020";
+color:$card-success-color;
+font-weight:bold;
+left:-0.2rem;
+}
+
+li.first{
+padding-left:1.5rem !important;
+background:url('http://rouchfilms.com/icon/1.png') no-repeat 0 5%;
+}
+
+li.second{
+padding-left:1.5rem !important;
+background:url('http://rouchfilms.com/icon/2.png') no-repeat 0 5%;
+}
+
+li.third{
+padding-left:1.5rem !important;
+background:url('http://rouchfilms.com/icon/3.png') no-repeat 0 5%;
+}
+
+li.fourth{
+padding-left:1.5rem !important;
+background:url('http://rouchfilms.com/icon/4.png') no-repeat 0 5%;
+}
+
+// List icons ends
