@@ -13,7 +13,9 @@
 $ git clone https://github.com/xinoxan/responsive-maquette-bootstrap-4.git
 
 $ npm install gulp 
- 
+
+$ cd responsive-maquette-bootstrap-4
+
 $ gulp build
 
 $ gulp
